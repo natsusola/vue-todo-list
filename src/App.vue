@@ -1,9 +1,12 @@
 <template>
-  <div>Hello Vue</div>
+  <Home></Home>
 </template>
 
 <script>
+  import { Home } from '@/js/views';
+  
   export default {
-    name: 'App'
+    name: 'App',
+    components: { Home }
   };
 </script>

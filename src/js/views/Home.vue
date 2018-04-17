@@ -21,7 +21,10 @@
           Done
         </div>
       </div>
-      <div>
+      <div class="task-container">
+        <div class="task-card">
+
+        </div>
       </div>
     </div>
   </div>

@@ -20,7 +20,7 @@ let config = {
   },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: `js/[name].js?${addHash()}`
+    filename: `js/[name].js?${addHash()}`,
   },
   devtool: __DEV__ ? 'source-map' : '',
   devServer: {
@@ -72,7 +72,7 @@ let config = {
           loader: 'file-loader',
           options: {
             outputPath: 'assets/',
-            publicPath: '../../../'
+            publicPath: '../assets/'
           }
         }
       }

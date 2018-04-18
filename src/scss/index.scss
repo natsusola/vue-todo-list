@@ -1,12 +1,16 @@
-.tab-group {
+:root {
+  --light-gray: #bbb;
+}
 
+.tab-group {
   .tab-title {
     text-align: center;
-    border-bottom: 1px solid #007bff;
-    color: #aaa;
+    border-bottom: 1px solid var(--primary);
+    color: var(--light-gray);
     padding: 5px 0;
+    cursor: pointer;
     &.active {
-      background: #007bff;
+      background: var(--primary);
       color: white;
     }
   }
@@ -21,4 +25,39 @@
   input, button {
     border-radius: 0;
   }
+}
+
+.task-container {
+  .task-card {
+    align-items: center;
+    border: 1px solid #aaa;
+    padding: 10px 5px;
+  }
+  .icon-btn {
+    margin: 0 5px;
+    color: var(--light-gray);
+    font-size: 17px;
+
+    &.icon-edit {
+      &:hover {
+        color: var(--gray);
+      }
+    }
+
+    &.icon-triger {
+      &:hover, &.active {
+        color: var(--success);
+      }
+    }
+
+    &.icon-rm {
+      &:hover {
+        color: var(--danger);
+      }
+    }
+  }
+}
+
+.icon-btn {
+  cursor: pointer;
 }

@@ -2,6 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+
 import './scss/index.scss';
 
 if (!__DEV__) console.log = () => {};

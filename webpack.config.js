@@ -86,7 +86,6 @@ let config = {
   },
   plugins: [
     new WebpackMd5Hash(),
-    // new webpack.ProvidPlugin({ $: 'jquery' }),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendors'],
       filename: `js/[name].js?${addHash()}`

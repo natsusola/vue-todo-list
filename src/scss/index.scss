@@ -2,6 +2,25 @@
   --light-gray: #bbb;
 }
 
+body {
+  height: 100vh;
+}
+
+.row {
+  margin: 0;
+}
+
+.content, .detail-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-content {
+  flex: 1;
+  margin-top: 5px;
+}
+
 .tab-group {
   .tab-title {
     text-align: center;
@@ -28,6 +47,9 @@
 }
 
 .task-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
   .task-card {
     align-items: center;
     border: 1px solid #aaa;
@@ -39,8 +61,8 @@
     font-size: 17px;
 
     &.icon-edit {
-      &:hover {
-        color: var(--gray);
+      &:hover, &.active {
+        color: var(--primary);
       }
     }
 

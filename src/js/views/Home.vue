@@ -20,6 +20,8 @@
         <div class="col tab-title" :class="{active: filter === 'done'}"
           @click="onClickTab('done')">
           Done ({{tasks | countFilteredTasks('done')}})
+          <i class="fa fa-trash icon-btn icon-clear" aria-hidden="true"
+            @click.stop="doClearDoneTasks()"></i>
         </div>
       </div>
       <div class="task-container">
@@ -95,6 +97,9 @@
           if (t.id === tid) t.editing = !t.editing;
           return t;
         });
+      },
+      doClearDoneTasks() {
+        this.tasks = this.tasks.filter(t => !t.done);
       }
     },
     filters: {

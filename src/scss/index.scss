@@ -80,6 +80,10 @@ body {
   }
 }
 
+.icon-btn.icon-clear:hover {
+  color: var(--danger);
+}
+
 .icon-btn {
   cursor: pointer;
 }
